@@ -8,6 +8,11 @@ import {
   Pressable
 } from "react-native";
 import bg from "./assets/bg.jpeg";
+import {withAuthenticator} from "aws-amplify-react-native"
+//Amplify Configuration
+import Amplify from 'aws-amplify'
+import config from './src/aws-exports'
+Amplify.configure(config)
 
 const emptyMap = [
   ["", "", ""], // 1st row
@@ -42,7 +47,7 @@ const Cell = (props) => {
   );
 };
 
-export default function App() {
+function App() {
   const [map, setMap] = useState(emptyMap);
   const [currentTurn, setCurrentTurn] = useState("x");
   const [gameMode, setGameMode] = useState("BOT_MEDIUM"); // LOCAL, BOT_EASY, BOT_MEDIUM;
@@ -369,3 +374,4 @@ const styles = StyleSheet.create({
     ],
   },
 });
+export default withAuthenticator(App)

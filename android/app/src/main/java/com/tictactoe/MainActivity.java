@@ -1,4 +1,4 @@
-package com.tictactoe;
+package com.tictactoe.theshubham;
 
 import com.facebook.react.ReactActivity;
 
