@@ -26,6 +26,8 @@ export default StyleSheet.create({
     },
     buttons: {
       position: "absolute",
+      flexWrap:"wrap",
+      justifyContent:"center",
       bottom: 50,
       flexDirection: "row",
     },
